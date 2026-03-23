@@ -304,6 +304,7 @@ free -h|--human --si   # Show human readable memory usage in power of 1000 inste
 free -s|--seconds 5    # Show memory usage and update continuously every five seconds
 ```
 
+
 ## Logs & System Debugging
 
 journalctl -u nginx              # Logs for a specific service
@@ -312,16 +313,8 @@ journalctl -f                    # Follow logs in real time
 journalctl -k                    # Kernel logs (systemd)
 
 dmesg | tail                     # Recent kernel messages (early boot / non-systemd)
-tail -f /var/log/syslog          # Live system logs (Debian/Ubunt
-
-```bash
-journalctl -u nginx              # Logs for a specific service
-journalctl -xe                   # View system errors
-journalctl -f                    # Follow logs in real time
-
-dmesg | tail                     # Kernel logs (recent)
-tail -f /var/log/syslog          # Live system logs
-```
+tail -f /var/log/syslog          # Live system logs (Debian/Ubuntu)
+tail -f /var/log/messages        # Live system logs (RHEL/CentOS)
 
 ## Packages
 
