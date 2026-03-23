@@ -304,6 +304,17 @@ free -h|--human --si   # Show human readable memory usage in power of 1000 inste
 free -s|--seconds 5    # Show memory usage and update continuously every five seconds
 ```
 
+## Logs & System Debugging 
+
+```bash
+journalctl -u nginx              # Logs for a specific service
+journalctl -xe                   # View system errors
+journalctl -f                    # Follow logs in real time
+
+dmesg | tail                     # Kernel logs (recent)
+tail -f /var/log/syslog          # Live system logs
+```
+
 ## Packages
 
 ```bash
