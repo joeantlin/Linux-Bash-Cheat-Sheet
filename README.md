@@ -7,7 +7,7 @@
 ```bash
 !!            # Run the last command
 
-CTRL+r        # begin typing to search bash history (hit CTRL+r multiple times to find multiple occurances)
+CTRL+r        # Search bash history (hit CTRL+r multiple times to find multiple occurrences)
 
 touch foo.sh
 chmod +x !$   # !$ is the last argument of the last command i.e. foo.sh
