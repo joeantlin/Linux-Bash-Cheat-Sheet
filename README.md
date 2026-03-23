@@ -304,7 +304,6 @@ free -h|--human --si   # Show human readable memory usage in power of 1000 inste
 free -s|--seconds 5    # Show memory usage and update continuously every five seconds
 ```
 
-
 ## Logs & System Debugging
 
 journalctl -u nginx              # Logs for a specific service
