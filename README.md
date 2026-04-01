@@ -157,6 +157,27 @@ chmod a+x foo.sh         # Give everybody execute permission
 chmod +x foo.sh          # Give everybody execute permission
 ```
 
+## Update Users
+```bash
+sudo adduser foo                                    #Create user
+sudo adduser -g|--default-group bar foo             #Create user with default group
+sudo adduser -G|--secondary-groups bar1,bar2 foo    #Create user with secondary groups
+sudo usermod -g|--default-group barx foo            #Change user default group
+sudo usermod -G|--default-group bar3,bar4 foo       #Replace user secondary groups
+sudo usermod -a|--add -G|--default-group bar3 foo   #Add secondary group to user
+sudo usermod -d|--home-directory /home/foo foo      #Change user home directory
+sudo usermod -l|--username foo1 foo                 #Change user login name
+sudo usermod -L|--lock foo                          #Lock user account
+sudo userdel foo                                    #Delete user
+sudo userdel -r|--all-files foo                     #Delete user and files in home directory
+```
+
+## Ownership
+```bash
+sudo chown foo bar.txt   #Change user ownerhip of file
+sudo chown :foo bar.txt  #Change group ownerhip of file
+```
+
 ## Finding Files
 
 Find binary files for a command.
